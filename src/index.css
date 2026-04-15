@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --font-serif: "Playfair Display", serif;
+  
+  --color-bg: #0B0B0B;
+  --color-accent: #F5C542;
+  --color-accent-hover: #D4A72C;
+  --color-card: #161616;
+  --color-card-border: rgba(255, 255, 255, 0.05);
+  --color-text-dim: #A0A0A0;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-bg text-white font-sans antialiased overflow-x-hidden;
+  }
+
+  /* Hide scrollbars but keep functionality */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@layer components {
+  .glow-button {
+    @apply relative overflow-hidden transition-all duration-300;
+    box-shadow: 0 0 15px rgba(245, 197, 66, 0.3);
+  }
+
+  .glow-button:hover {
+    box-shadow: 0 0 25px rgba(245, 197, 66, 0.5);
+    @apply scale-[1.02];
+  }
+
+  .glass-panel {
+    @apply bg-card border border-card-border rounded-3xl backdrop-blur-md;
+  }
+
+  .sun-avatar-glow {
+    background: radial-gradient(circle, #F5C542 0%, #D4A72C 100%);
+    box-shadow: 0 0 30px rgba(245, 197, 66, 0.4);
+  }
+
+  .service-card-gradient {
+    background: linear-gradient(145deg, #1A1A1A 0%, #0B0B0B 100%);
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "paymentMethods": {
+    "netMonet": true,
+    "card": true
+  },
+  "sections": {
+    "tarot": true,
+    "magic": true,
+    "amulets": true,
+    "path": true,
+    "retreat": true,
+    "education": true
+  }
+}
